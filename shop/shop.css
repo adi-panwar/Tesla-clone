@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+/* ══════════════════════════════════════
+   NAV
+══════════════════════════════════════ */
+
+header {
+  color: white;
+}
+header:hover {
+  background-color: white;
+  color: black;
+
+}
+.nav {
+  position: fixed;
+  inset: 0;
+  
+  z-index: 100;
+  height: 8%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__logo img {
+  height: 45px;
+  width: auto;
+  fill: var(black);
+  transition: opacity 0.2s;
+
+}
+
+.nav__logo p {
+  font-size: 13px;
+  font-weight: 550;
+  border-left: 2px solid white;
+  padding-left: 25px;
+  margin-left: 18px;
+}
+
+
+.nav__links {
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav__links a {
+  font-size: 13.5px;
+  font-weight: 500;
+  /* letter-spacing: 0.3px; */
+  padding: 6px 14px;
+}
+
+.nav__icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.nav__icon-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  
+}
+
+.nav__icon-btn p {
+  font-weight: 550;
+  padding: 5px;
+}
+
+.nav__icon-btn:hover p {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+
+/* hero section start from here ---------------  */
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: var(--nav-h); */
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.hero__content {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  padding: 0 24px;
+}
+
+.hero__title {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.hero__cta {
+  display: inline-block;
+  background: #fff;
+  color: #494c50;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 10px 6.5rem;
+  border-radius: 3px;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s;
+}
+.hero__cta:hover {
+  background: var(--black);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* SECTION-HEADER (shared)--------------  */
+
+.best-seller {
+  margin: 50px 0px 0px 23px;
+}
+
+.part-2nd {
+  height: 450px;
+  width: 100%;
+  margin: 30px 0px 0px 23px;
+  /* overflow-x: hidden; */
+  /* position: relative; */
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 260vw;
+  height: 100%;
+  gap: 25px;
+}
+
+.slide {
+  width: 29.5vw;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.slide p {
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-blue {
+  background: #3457b1;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-light {
+  background: white;
+  border: none;
+  padding: 12px 65px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons1 {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* SLIDER MOVEMENT */
+
+/* arrows  */
+
+.arrows {
+  margin-right: 10px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: black; */
+}
+
+.arrows label {
+  height: 100%;
+  width: 45px;
+  text-align: center;
+  font-size: 32px;
+  /* margin: 0px 55px; */
+  background-color: #adadad;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); */
+}
+
+.next {
+  margin: 0px 55px;
+}
+
+#s1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#s2:checked ~ .slides {
+  transform: translateX(-31vw);
+}
+
+#s3:checked ~ .slides {
+  transform: translateX(-62.3vw);
+}
+#s4:checked ~ .slides {
+  transform: translateX(-93.4vw);
+}
+#s5:checked ~ .slides {
+  transform: translateX(-124.5vw);
+}
+#s6:checked ~ .slides {
+  transform: translateX(-151.3vw);
+}
+/* #s7:checked ~ .slides {
+  transform: translateX(-172.3vw);
+}
+#s8:checked ~ .slides {
+  transform: translateX(-202.3vw);
+} */
+
+#s1:checked ~ .arrows .pre[for="s6"],
+#s1:checked ~ .arrows .next[for="s2"],
+
+#s2:checked ~ .arrows .pre[for="s1"],
+#s2:checked ~ .arrows .next[for="s3"],
+
+#s3:checked ~ .arrows .pre[for="s2"],
+#s3:checked ~ .arrows .next[for="s4"], 
+
+#s4:checked ~ .arrows .pre[for="s3"],
+#s4:checked ~ .arrows .next[for="s5"],
+
+#s5:checked ~ .arrows .pre[for="s4"],
+#s5:checked ~ .arrows .next[for="s6"], 
+
+#s6:checked ~ .arrows .pre[for="s5"],
+#s6:checked ~ .arrows .next[for="s1"]
+
+/* #s7:checked ~ .arrows .pre[for="s6"],
+#s7:checked ~ .arrows .next[for="s8"], 
+
+#s8:checked ~ .arrows .pre[for="s7"],
+#s8:checked ~ .arrows .next[for="s1"]  */ {
+  display: block;
+}
+
+.image-1 {
+  margin-top: 8rem;
+}
+
+/* apparel start from here ------------------  */
+
+.apparel {
+  width: 100%;
+  height: 97.3vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: white;
+}
+
+.apparel__card {
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0px 60px 0px;
+}
+
+/* 
+.apparel__card img{
+  width: 100%;
+  /* height: 100%; */
+
+.apparel__card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 550;
+}
+
+.apparel__card button {
+  padding: 10px 30px;
+  border: 2px solid black;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.apparel__card button:hover {
+  background: black;
+  color: white;
+}
+
+/* footer start from here --------------------  */
+
+footer {
+  font-size: 12px;
+  color: #5c5e62;
+  height: 9%;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#nav.scrolled{
+  background:white;
+  color:black;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
